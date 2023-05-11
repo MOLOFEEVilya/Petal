@@ -7,6 +7,7 @@
         height: 665px;
         margin-top: 70px;
         padding-left: 30px;
+        overflow: hidden;
         .home-container__box {
             display: flex;
             .left-block-w-content {
@@ -62,8 +63,9 @@
                 }
             }
             .right-block-w-animations {
-                width: 100%;
                 background-color: #acf8f5;
+                width: 50%;
+                overflow: hidden;
                 .home-animation-container {
                     width: 200%;
                 //     // display: grid;
@@ -74,6 +76,7 @@
                         display: grid;
                         grid-template-columns: 350px 350px 350px;
                         grid-template-rows: 350px 350px 350px;
+                        animation: home-animation 20s infinite linear;
                         .top-left {
                             grid-area: 1 / 1 / 2 / 2;
                             width: 217px;
@@ -142,7 +145,7 @@
     }
 }
 
-.ani__img-container and .img-container__cards {
-    width: 217px;
-    height: 334px;
+@keyframes home-animation {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
 }
