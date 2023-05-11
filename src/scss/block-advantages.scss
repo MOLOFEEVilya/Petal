@@ -1,0 +1,22 @@
+.block-advantages {
+    background-color: #f7f7f7;
+    color: #1e1d1d;
+    padding: 96px 30px;
+    .block-advantages-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        text-decoration: none;
+        .section-title {
+            margin-bottom: 64px;
+            .section-title__heading-title {
+                text-align: center;
+                letter-spacing: -.03em;
+                margin-top: 10px;
+                margin-bottom: 24px;
+                font-size: 2.5em;
+                font-weight: 700;
+                line-height: 1.2em;
+            }
+        }
+    }
+}

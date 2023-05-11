@@ -1,14 +1,12 @@
+@import "variables";
+
 .info-card {
     width: 100%;
     padding: 96px 30px;
     background-color: #f7f7f7;;
-    .container-w-info {
-        width: 100%;
+    .info-card-container {
+        max-width: 1280px;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-column-gap: 40px;
         .preamble {
             width: 100%;
             margin: 0 auto 64px auto;
@@ -33,7 +31,12 @@
             }
         }
         .container-w-info {
-            grid-template-rows: auto;
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 40px;
             .left-box-w-petal {
                 grid-area: span 1 / span 1 / span 1 / span 1;
                 background-color: #fff;
@@ -67,14 +70,87 @@
                         border: 0;
                     }
                 }
+                .card-list {
+                    border-top: 1px solid rgba(30, 29, 29, .12);
+                    .box-w-info-first {
+                        @include block-cards-gr();
+                    }
+                    .box-w-info-seconde {
+                        @include block-cards-gr();
+                    }
+                    .box-w-info-therd {
+                        @include block-cards-gr();
+                    }
+                    .box-w-info-fourth {
+                        @include block-cards-gr();
+                    }
+                    .box-w-info-fivth {
+                        @include block-cards-gr();
+                    }
+                }
+                .card-bottom-button {
+                    @include front-button();
+                }
+            }
+            .right-box-w-petal {
+                grid-area: span 1 / span 1 / span 1 / span 1;
+                background-color: #fff;
+                .header-block-w-info {
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 48px;
+                    display: flex;
+                    overflow: hidden;
+                    padding-top: 24px;
+                    padding-bottom: 24px;
+                    .card-header-text-div {
+                        padding-right: 8px;
+                        .card-header-text-div__card-main-title {
+                            margin-bottom: 16px;
+                            font-size: 2.5em;
+                            font-weight: 700;
+                            line-height: .8em;
+                        }
+                        .card-header-text-div__card-subtile {
+                            opacity: .72;
+                            font-size: 1em;
+                            line-height: 1.5em;
+                        }
+                    }
+                    .card-header-text-div__small-card-img {
+                        max-width: 100%;
+                        vertical-align: middle;
+                        display: inline-block;
+                        height: 140px;
+                        border: 0;
+                    }
+                }
+                .card-list {
+                    border-top: 1px solid rgba(30, 29, 29, .12);
+                    .box-w-info-first {
+                        @include block-cards-ye();
+                    }
+                    .box-w-info-seconde {
+                        @include block-cards-ye();
+                        grid-template-columns: 2.5fr 1fr;
+                        .-m {
+                            text-align: start !important;
+                        }
+                    }
+                    .box-w-info-therd {
+                        @include block-cards-ye();
+                    }
+                    .box-w-info-fourth {
+                        @include block-cards-ye();
+                    }
+                    .box-w-info-fivth {
+                        @include block-cards-ye();
+                    }
+                }
+                .card-bottom-button {
+                    @include front-button();
+                }
             }
         }
     }
-}
-.left-box-w-petal {
-    width: 45%;
-}
-
-.card-info-div {
-    width: 45%;
 }
