@@ -18,5 +18,32 @@
                 line-height: 1.2em;
             }
         }
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            .white-card {
+                background-color: #fff;
+                padding: 32px 20px;
+                width: 405px;
+                height: 435px;
+                margin: 0 10px;
+                .white-card__big-icon {
+                    margin-bottom: 32px;
+                }
+                .white-card__h3-card-title {
+                    margin-top: 0;
+                    margin-bottom: 24px;
+                    font-size: 1.5em;
+                    font-weight: 500;
+                    line-height: 1.4em;
+                }
+                .white-card__normal-text {
+                    font-size: 18px;
+                    color: rgba(30, 29, 29, .78);
+                }
+            }
+        }
     }
 }
