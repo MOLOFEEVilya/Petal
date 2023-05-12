@@ -22,125 +22,121 @@
                 @include heading-title();
             }
         }
-    }
-    .box-w-grid {
-        max-width: 1280px;;
-        display: grid;
-        grid-template-columns: 480px 200px 470px;
-        grid-template-rows: 543px 550px 600px;
-        grid-gap: 30px;
-        .block-w-flex {
-            grid-area: 1 / 1 / 2 / 4;
-            background-color: #6eeb9d;
-            .green {
+        .box-w-grid {
+            max-width: 1280px;;
+            display: grid;
+            grid-template-columns: 480px 200px 470px;
+            grid-template-rows: 543px 550px 600px;
+            grid-gap: 30px;
+            .block-flex {
+                grid-area: 1 / 1 / 2 / 4;
+                background-color: #6eeb9d;
                 display: flex;
-                flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
+                justify-content: space-between;
                 padding: 48px;
-                justify-content: center;
-                .left-side-div__heading-title {
-                    @include heading-title();
-                }
-                .left-side-div__regular-text {
-                    @include regular-text();
-                }
-            }
-        }
-        .right-side-image-with-top {
-            padding-top: 24px;
-            grid-area: 1 / 2 / 2 / 4;
-            background-color: #6eeb9d;
-            display: flex;
-            justify-content: center;
-        }
-        .block-left-side-div {
-            background-color: #f7f7f7;
-            grid-area: 2 / 1 / 3 / 2;
-            flex-direction: column;
-            padding: 48px;
-            display: flex;
-            text-align: center;
-            .block-left-side-div__credit-score-image {
-                width: 375px;
-                height: 261px;
-                margin: 0 auto;
-            }
-            .in-card-text-content {
-                margin-top: auto;
-                flex-direction: column;
-                display: flex;
-                justify-content: center;
-                .in-card-text-content__heading-title {
-                    @include heading-title();
-                }
-                .in-card-text-content__regular-text {
-                    @include regular-text();
-                }
-            }
-        }
-        .right-side-block {
-                grid-area: 2 / 2 / 3 / 4;
-                background-color: #f7f7f7;
-                background-image: url(/img/background.png);
-                background-position: 100%;
-                background-repeat: no-repeat;
-                background-size: contain;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                display: flex;
-                padding: 48px;
-                .right-side-div {
-                    max-width: 480px;
-                    .right-side-div__heading-title {
+                .green {
+                    max-width: 400px;
+                    .left-side-div__heading-title {
                         @include heading-title();
                     }
-                    .right-side-div__regular-text {
+                    .left-side-div__regular-text {
                         @include regular-text();
                     }
                 }
-        }
-        .yellow {
-            grid-area: 3 / 1 / 4 / 3;
-            background-color: #fff67f;
-            flex-direction: column;
-            padding: 48px;
-            display: flex;
-            text-align: center;
-            .left-side-div__credit-score-image {
-                width: 342px;
-                height: 282px;
-                margin: 0 auto;
-            }
-            .in-card-text-content {
-                margin-top: auto;
-                .in-card-text-content__heading-title {
-                    @include heading-title();
-                }
-                .in-card-text-content__regular-text {
-                    @include regular-text();
+                .right-side-image-with-top {
+                    margin-top: 30px;
                 }
             }
-        }
-        .teal {
-            grid-area: 3 / 3 / 4 / 4;
-            background-color: #acf8f5;
-            flex-direction: column;
-            padding: 48px;
-            display: flex;
-            text-align: center;
-            .left-side-div__credit-score-image {
-                width: 375px;
-                height: 192px;
-                margin: 0 auto;
-            }
-            .in-card-text-content {
-                margin-top: auto;
-                .in-card-text-content__heading-title {
-                    @include heading-title();
+            .block-left-side-div {
+                background-color: #f7f7f7;
+                grid-area: 2 / 1 / 3 / 2;
+                flex-direction: column;
+                padding: 48px;
+                display: flex;
+                text-align: center;
+                .block-left-side-div__credit-score-image {
+                    width: 375px;
+                    height: 261px;
+                    margin: 0 auto;
                 }
-                .in-card-text-content__regular-text {
-                    @include regular-text();
+                .in-card-text-content {
+                    margin-top: auto;
+                    flex-direction: column;
+                    display: flex;
+                    justify-content: center;
+                    .in-card-text-content__heading-title {
+                        @include heading-title();
+                    }
+                    .in-card-text-content__regular-text {
+                        @include regular-text();
+                    }
+                }
+            }
+            .right-side-block {
+                    grid-area: 2 / 2 / 3 / 4;
+                    background-color: #f7f7f7;
+                    background-image: url(/img/background.png);
+                    background-position: 100%;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    display: flex;
+                    padding: 48px;
+                    .right-side-div {
+                        max-width: 480px;
+                        .right-side-div__heading-title {
+                            @include heading-title();
+                        }
+                        .right-side-div__regular-text {
+                            @include regular-text();
+                        }
+                    }
+            }
+            .yellow {
+                grid-area: 3 / 1 / 4 / 3;
+                background-color: #fff67f;
+                flex-direction: column;
+                padding: 48px;
+                display: flex;
+                text-align: center;
+                .left-side-div__credit-score-image {
+                    width: 342px;
+                    height: 282px;
+                    margin: 0 auto;
+                }
+                .in-card-text-content {
+                    margin-top: auto;
+                    .in-card-text-content__heading-title {
+                        @include heading-title();
+                    }
+                    .in-card-text-content__regular-text {
+                        @include regular-text();
+                    }
+                }
+            }
+            .teal {
+                grid-area: 3 / 3 / 4 / 4;
+                background-color: #acf8f5;
+                flex-direction: column;
+                padding: 48px;
+                display: flex;
+                text-align: center;
+                .left-side-div__credit-score-image {
+                    width: 375px;
+                    height: 192px;
+                    margin: 0 auto;
+                }
+                .in-card-text-content {
+                    margin-top: auto;
+                    .in-card-text-content__heading-title {
+                        @include heading-title();
+                    }
+                    .in-card-text-content__regular-text {
+                        @include regular-text();
+                    }
                 }
             }
         }
