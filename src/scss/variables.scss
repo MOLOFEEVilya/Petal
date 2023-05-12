@@ -65,7 +65,7 @@
 }
 
 @mixin front-button {
-    padding: 24px 40px;
+        padding: 24px 40px;
         .card-bottom-button__secondary-button {
         max-width: 100%;
         color: #1e1d1d;
@@ -84,3 +84,20 @@
         }
     }
 }
+
+@mixin heading-title {
+    letter-spacing: -.03em;
+    margin-top: 10px;
+    margin-bottom: 24px;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+@mixin regular-text {
+    color: $black-text;
+    font-size: 1.125em;
+    line-height: 1.55em;
+}
+
+$black-text: rgba(30, 29, 29, .72);
