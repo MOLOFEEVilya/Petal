@@ -95,9 +95,51 @@
 }
 
 @mixin regular-text {
-    color: $black-text;
+    color: #1e1d1d;
     font-size: 1.125em;
     line-height: 1.55em;
+}
+
+@mixin overline {
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+@mixin heading {
+    letter-spacing: -.03em;
+    margin-top: 10px;
+    margin-bottom: 24px;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+@mixin flap {
+    width: 64px;
+    height: 64px;
+    margin-top: -1px;
+    margin-right: -1px;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: auto;
+    right: 0%;
+}
+
+@mixin bottom-div {
+    margin-top: auto;
+    .bottom-div__regular-text {
+    @include regular-text();
+    font-weight: 600;
+    }
+    .bottom-div__small-text {
+    line-height: 1.5em;
+    color: $black-text;
+    }
 }
 
 $black-text: rgba(30, 29, 29, .72);
