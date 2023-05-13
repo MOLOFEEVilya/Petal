@@ -86,6 +86,9 @@
                     }
                     .box-w-info-fivth {
                         @include block-cards-gr();
+                        .card-item-list-left-div {
+                            grid-area: span 1 / span 2 / span 1 / span 2;
+                        }
                     }
                 }
                 .card-bottom-button {
@@ -145,6 +148,9 @@
                     }
                     .box-w-info-fivth {
                         @include block-cards-ye();
+                        .card-item-list-left-div {
+                            grid-area: span 1 / span 2 / span 1 / span 2;
+                        }
                     }
                 }
                 .card-bottom-button {
