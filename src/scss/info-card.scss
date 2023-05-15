@@ -58,7 +58,7 @@
                         }
                         .card-header-text-div__card-subtile {
                             opacity: .72;
-                            font-size: 1em;
+                            font-size: 0.9em;
                             line-height: 1.5em;
                         }
                     }
@@ -116,7 +116,7 @@
                         }
                         .card-header-text-div__card-subtile {
                             opacity: .72;
-                            font-size: 1em;
+                            font-size: 0.9em;
                             line-height: 1.5em;
                         }
                     }
@@ -159,4 +159,38 @@
             }
         }
     }
+}
+
+.green-card:hover {
+    background-color: rgb(0, 102, 63);
+    transition: 0.5s;
+    cursor: auto;
+    .card-header-text-div {
+            color: white;
+    }
+    .card-header-text-div__small-card-img {
+        transition: 0.5s;
+        transform: translate3d(-48px, 60px, 0px) scale3d(1.7, 1.7, 1) rotateX(0deg) rotateY(0deg) rotateZ(24deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+    }
+}
+
+.yellow-card:hover {
+    background-color: rgb(0, 102, 63);
+    transition: 0.5s;
+    cursor: auto;
+    .card-header-text-div {
+        color: white;
+    }
+    .card-header-text-div__small-card-img {
+        transition: 0.5s;
+        transform: translate3d(-48px, 60px, 0px) scale3d(1.7, 1.7, 1) rotateX(0deg) rotateY(0deg) rotateZ(24deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+    }
+}
+
+.card-bottom-button:hover {
+    color: #000;
+    mix-blend-mode: exclusion;
+    cursor: pointer;
 }
