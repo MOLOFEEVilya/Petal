@@ -71,11 +71,11 @@
                 padding: 48px;
                 display: flex;
                 .block-left-side-div__credit-score-image {
+                    max-width: 100%;
                     margin-bottom: 96px;
                     margin-left: auto;
                     margin-right: auto;
                     img {
-                        max-width: 100%;
                         vertical-align: middle;
                         display: inline-block;
                     }
