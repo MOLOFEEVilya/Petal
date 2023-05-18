@@ -3,12 +3,27 @@
 .section-black {
     background-color: #1e1d1d;
     padding: 96px 30px;
+    @media (max-width: 991px) {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+    @media (max-width: 767px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .section-black-container {
         max-width: 1280px;
         margin: 0 auto;
         .section-title {
             text-align: center;
             margin-bottom: 64px;
+            @media (max-width: 767px) {
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 48px;
+                display: flex;
+            }
             .section-title__overline {
                 @include overline();
                 color: rgba(255, 255, 255, .72);
@@ -18,6 +33,12 @@
                 color: #fff;
                 margin-bottom: 24px;
                 font-weight: 600;
+                @media (max-width: 767px) {
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 1.2em;
+                    margin-bottom: 16px;
+                }
             }
         }
         .container-w-info-grid {
@@ -26,10 +47,17 @@
             grid-row-gap: 32px;
             grid-template-rows: auto;
             grid-template-columns: 1fr 1fr 1fr;
+            @media (max-width: 767px) {
+                display: flex;
+                flex-flow: column;
+                grid-row-gap: 16px;
+            }
             .white-card {
                 background-color: #fff;
-                grid-area: span 1 / span 1 / span 1 / span 1;
                 padding: 48px;
+                @media (max-width: 991px) {
+                    padding: 32px;
+                }
                 .green-cr {
                     width: 48px;
                     height: 48px;
@@ -48,6 +76,12 @@
                     font-size: 1.5em;
                     font-weight: 500;
                     line-height: 1.4em;
+                    @media (max-width: 991px) {
+                        font-size: 24px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 20px;
+                    }
                 }
                 .white-card__normal-text {
                     font-size: 18px;

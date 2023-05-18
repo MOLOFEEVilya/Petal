@@ -85,7 +85,6 @@ body {
                 }
             }
             .box-w-link__button-arrow {
-                background-color: white;
                 width: 14px;
                 height: 12px;
                 margin-left: 13px;
@@ -147,6 +146,7 @@ body {
 }
 .box-w-link__link-now:hover {
     background-color: #545759 !important;
+    transition: 0.5s;
 }
 .list__link:hover {
     color: #545759 !important;

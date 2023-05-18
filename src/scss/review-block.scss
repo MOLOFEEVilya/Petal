@@ -5,22 +5,45 @@
     color: #1e1d1d;
     background-color: #f7f7f7;
     padding: 96px 30px 175px 30px;
+    @media (max-width: 991px) {
+        padding-bottom: 96px;
+    }
+    @media (max-width: 767px) {
+        padding-bottom: 64px;
+    }
     .review-block-container {
         max-width: 1280px;
         margin: 0 auto;
         .section-title {
             margin-bottom: 64px;
+            @media (max-width: 767px) {
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 48px;
+                display: flex;
+            }
             .section-title__heading-title {
                 @include heading();
                 margin-bottom: 0;
+                @media (max-width: 767px) {
+                    margin-bottom: 16px;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 1.2em;
+                }
             }
             .bottom-button-div {
                 align-items: center;
                 margin-top: 48px;
                 display: flex;
+                @media (max-width: 767px) {
+                    display: none;
+                }
                 .bottom-button-div__secondary-button {
+                    max-width: 100%;
                     color: #1e1d1d;
-                    background-color: rgba(0, 0, 0, 0);
+                    background-color: #f7f7f7;
                     border: 1px solid #000;
                     justify-content: center;
                     align-items: center;
@@ -40,20 +63,34 @@
             grid-row-gap: 32px;
             grid-template-rows: auto;
             grid-template-columns: 1fr 1fr 1fr;
+            @media (max-width: 991px) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+            }
             .green {
-                height: 388px;
-                grid-area: span 1 / span 1 / span 1 / span 1;
                 background-color: #6eeb9d;
                 flex-direction: column;
                 padding: 48px 60px;
                 display: flex;
                 position: relative;
                 transform: translate(-32px, 30px)rotate(-10deg);
+                @media (max-width: 767px) {
+                    transform: rotate(-10deg);
+                }
                 .testimonial-card__flap {
                     @include flap();
+                    @media (max-width: 767px) {
+                        width: 48px;
+                        height: 48px;
+                    }
                 }
                 .testimonial-card__regular-text {
                     @include regular-text();
+                    @media (max-width: 767px) {
+                        font-size: 18px;
+                    }
                 }
                 ._48px-h-sep {
                     height: 48px;
@@ -63,8 +100,6 @@
                 }
             }
             .teal {
-                height: 388px;
-                grid-area: span 1 / span 1 / span 1 / span 1;flex-direction: column;
                 padding: 48px 60px;
                 display: flex;
                 flex-direction: column;
@@ -72,10 +107,17 @@
                 background-color: #acf8f5;
                 .testimonial-card__flap {
                     @include flap();
+                    @media (max-width: 767px) {
+                        width: 48px;
+                        height: 48px;
+                    }
                 }
                 .testimonial-card__regular-text {
                     @include regular-text();
                     line-height: 1.35em;
+                    @media (max-width: 767px) {
+                        font-size: 18px;
+                    }
                 }
                 ._48px-h-sep {
                     height: 48px;
@@ -85,19 +127,27 @@
                 }
             }
             .yellow {
-                height: 388px;
-                grid-area: span 1 / span 1 / span 1 / span 1;
                 padding: 48px 60px;
                 display: flex;
                 flex-direction: column;
                 position: relative;
                 background-color: #fff67f;
                 transform: translate(32px)rotate(10deg);
+                @media (max-width: 767px) {
+                    transform: rotate(10deg);
+                }
                 .testimonial-card__flap {
                     @include flap();
+                    @media (max-width: 767px) {
+                        width: 48px;
+                        height: 48px;
+                    }
                 }
                 .testimonial-card__regular-text {
                     @include regular-text();
+                    @media (max-width: 767px) {
+                        font-size: 18px;
+                    }
                 }
                 ._48px-h-sep {
                     height: 48px;
@@ -107,11 +157,42 @@
                 }
             }
         }
+        .bottom-button-div-center {
+            align-items: center;
+            margin-top: 48px;
+            display: flex;
+            display: none;
+            @media (max-width: 767px) {
+                display: block;
+                margin-top: 100px;
+            }
+            .bottom-button-div-center__secondary-button {
+                max-width: 100%;
+                color: #1e1d1d;
+                background-color: #f7f7f7;
+                border: 1px solid #000;
+                justify-content: center;
+                align-items: center;
+                padding: 17px 24px;
+                font-size: 16px;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all .3s;
+                display: flex;
+            }
+        }
     }
 }
 
 .bottom-button-div__secondary-button:hover {
-    color: #000;
+    background-color: #000;
     mix-blend-mode: exclusion;
     cursor: pointer;
+    transition: 0.5s;
+}
+.bottom-button-div-center__secondary-button:hover {
+    background-color: #000;
+    mix-blend-mode: exclusion;
+    cursor: pointer;
+    transition: 0.5s;
 }
